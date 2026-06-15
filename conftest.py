@@ -9,7 +9,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--language",
         action="store",
-        default="ru",
+        default="en",
         help="Выберите язык интерфейса браузера (например, ru, en, fr)"
     )
 
