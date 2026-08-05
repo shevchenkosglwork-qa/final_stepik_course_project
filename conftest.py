@@ -30,7 +30,6 @@ def browser(request):
     options.add_argument("--window-size=1920,1080")
 
     # 4. Настраиваем язык для Chrome
-    options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
 
     # 5. Инициализируем драйвер с нашими настройками
