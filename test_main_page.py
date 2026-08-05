@@ -23,4 +23,4 @@ def test_guest_should_see_login_page(browser):
     login_page.open()
     login_page.should_be_login_page()
 
-
+    #Попробовать провалить проверки и перейти к след. уроку
