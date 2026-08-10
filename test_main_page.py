@@ -15,12 +15,14 @@ def test_guest_should_see_login_link(browser):
     page.open()
     page.should_be_login_link()
     page.go_to_login_page()
-
-
-def test_guest_should_see_login_page(browser):
-    login_link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
-    login_page = LoginPage(browser, login_link)
+    login_page = LoginPage(browser, browser.current_url)
     login_page.open()
     login_page.should_be_login_page()
+
+# def test_guest_should_see_login_page(browser):
+#     login_link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+#     login_page = LoginPage(browser, login_link)
+#     login_page.open()
+#     login_page.should_be_login_page()
 
     #Попробовать провалить проверки и перейти к след. уроку
