@@ -22,8 +22,14 @@ def browser(request):
 
     print(f"\n--- Старт браузера для теста (Язык: {user_language}) ---")
 
-    # 4. Настраиваем язык для Chrome
     options = Options()
+    # Обязательные флаги для CI/CD и Linux-контейнеров:
+    #options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1920,1080")
+
+    # 4. Настраиваем язык для Chrome
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
 
     # 5. Инициализируем драйвер с нашими настройками
